@@ -2,7 +2,12 @@
 
 These settings apply to both **Warp** and **Warp Pro** subscriptions.  
 
-![Warp General settings](../images/warp-settings.jpg)
+## Remote DNS
+
+Warp remote DNS can be only of type IPv4 for performance and compatibility. The default DNS is Cloudflare public DNS which is a perfect candidate. It's highly recommended to use Cloudflare DNS servers if you insist on changing it, which have most compatibility and efficiency when used with Cloudflare Warp, like:
+
+- 1.1.1.2, 1.0.0.2 (Cloudflare security DNS)
+- 1.1.1.3, 1.0.0.3 (Cloudflare adult DNS)
 
 ## Endpoints - Scanner
 
@@ -12,7 +17,6 @@ Endpoints for Warp function similarly to Clean IPs for VLESS and Trojan. The pan
     - Endpoints are formatted as IP:Port or Domain:Port and must be entered one per line.
     - For IPv6 addresses, enclose them in square brackets. See the example below:
 
-    Endpoint examples:
     ```title="IPv4"
     123.45.8.6:1701
     ```
@@ -35,6 +39,10 @@ If your ISP does not support IPv6, disable it to optimize DNS and proxy performa
 
 **Warp** and **Warp Pro** subscriptions include **Best Ping** configs. By default, these test configs every 30 seconds to identify the optimal config or Endpoint for connection. On slower networks, this interval may cause lag during activities like video streaming or gaming. You can adjust the interval between 10 and 90 seconds.
 
-## Warp Accounts
+## Reserved Bytes
+
+Some ISPs flaged this to block Warp handshakes, so disabling it is not recommended but might help sometimes.
+
+## Renew Warp Accounts
 
 Updating the accounts retrieves new Warp accounts from **Cloudflare**. This process does not affect connection speed or other settings.
